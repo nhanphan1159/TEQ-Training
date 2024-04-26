@@ -1,7 +1,6 @@
 @import 'normalize.css';
 
-:root {
-}
+
 
 html {
   font-size: 1.6rem;
@@ -15,8 +14,11 @@ html {
 }
 
 body {
-  font-family: Inter, sans-serif;
+  font-family: Inter;
   display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 h2 {
