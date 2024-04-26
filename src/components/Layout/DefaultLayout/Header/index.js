@@ -1,16 +1,35 @@
-import classNames from 'classnames/bind';
-import styles from './Header.module.scss';
+import React from 'react';
+
+import { useScroll } from '~/hook/useScrollListener';
 import { Link } from 'react-router-dom';
+import configRoutes from '~/config/routes';
+import classNames from 'classnames/bind';
+import { NavLink } from 'react-router-dom';
 import Button from '~/components/Button';
+import styles from './Header.module.scss';
 
 const cx = classNames.bind(styles);
 
 function Header() {
+  const { y, x, scrollDirection } = useScroll();
+
+  const styles = {
+    active: {
+      visibility: 'visible',
+      transition: 'all 0.5s',
+    },
+    hidden: {
+      visibility: 'hidden',
+      transition: 'all 0.5s',
+      transform: 'translateY(-100%)',
+    },
+  };
+
   return (
-    <div className={cx('wrapper')}>
+    <div className={cx('wrapper')} style={scrollDirection === 'down' ? styles.active : styles.hidden}>
       <div className={cx('inner')}>
         <div className={cx('logo')}>
-          <Link to="/">
+          <NavLink className={cx('logo_link')} to={configRoutes.home}>
             <svg xmlns="http://www.w3.org/2000/svg" width="234" height="49" viewBox="0 0 234 49" fill="none">
               <g clip-path="url(#clip0_6_62236)">
                 <path
@@ -37,38 +56,39 @@ function Header() {
                 </clipPath>
               </defs>
             </svg>
-          </Link>
+          </NavLink>
         </div>
         <div className={cx('menu')}>
           <ul className={cx('menu-list')}>
             <li className={cx('menu-item')}>
-              <Link className={cx('link')} to="/">
+              <NavLink className={cx('link')} to={configRoutes.home}>
                 HOME
-              </Link>
+              </NavLink>
             </li>
             <li className={cx('menu-item')}>
-              <Link className={cx('link')} to="/about-us">
+              <NavLink className={cx('link')} to={configRoutes.aboutus}>
                 ABOUT US
-              </Link>
+              </NavLink>
             </li>
             <li className={cx('menu-item')}>
-              <Link className={cx('link')} to="/careers">
+              <NavLink className={cx('link')} to={configRoutes.careers}>
                 CAREERS
-              </Link>
+              </NavLink>
             </li>
             <li className={cx('menu-item')}>
-              <Link className={cx('link')} to="/gallery">
+              <NavLink className={cx('link')} to={configRoutes.gallery}>
                 GALLERY
-              </Link>
+              </NavLink>
             </li>
           </ul>
           <Button className={cx('menu-contact')}>
-            <span className={cx('title-btn')}>CONTACT US</span>
+            <Link to={configRoutes.contact} className={cx('title-btn')}>
+              CONTACT US
+            </Link>
           </Button>
         </div>
       </div>
     </div>
   );
 }
-
 export default Header;
