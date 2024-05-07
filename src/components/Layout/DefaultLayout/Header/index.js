@@ -11,7 +11,7 @@ import styles from './Header.module.scss';
 const cx = classNames.bind(styles);
 
 function Header() {
-  const { y, x, scrollDirection } = useScroll();
+  const { scrollDirection } = useScroll();
 
   const styles = {
     active: {
@@ -26,7 +26,7 @@ function Header() {
   };
 
   return (
-    <div className={cx('wrapper')} style={scrollDirection === 'down' ? styles.active : styles.hidden}>
+    <div className={cx('wrapper')} style={scrollDirection === 'up' ? styles.hidden : styles.active}>
       <div className={cx('inner')}>
         <div className={cx('logo')}>
           <NavLink className={cx('logo_link')} to={configRoutes.home}>
@@ -81,7 +81,7 @@ function Header() {
               </NavLink>
             </li>
           </ul>
-          <Button className={cx('menu-contact')}>
+          <Button primary>
             <Link to={configRoutes.contact} className={cx('title-btn')}>
               CONTACT US
             </Link>
