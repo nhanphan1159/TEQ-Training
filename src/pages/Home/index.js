@@ -3,6 +3,7 @@ import classNames from 'classnames/bind';
 import styles from './Home.module.scss';
 import configRoutes from '~/config/routes';
 import { careers } from './carers';
+import { IMG } from './IMG';
 
 import map from './IMG/Map.jpg';
 
@@ -1023,6 +1024,90 @@ function Home() {
                 </svg>
               </div>
             </div>
+          </div>
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            width: '100%',
+            height: 685,
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'column',
+          }}
+        >
+          <span style={{ padding: '60px 0 40px' }}>Lastest News</span>
+          <div
+            className={cx('New')}
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: 16,
+            }}
+          >
+            {IMG.map((item) => (
+              <div
+                className={cx('IMGS')}
+                style={{
+                  width: 399,
+                  height: 374,
+                  border: '1px solid #ccc',
+                  borderRadius: 4,
+                  backgroundColor: '#F4F4F4',
+                }}
+              >
+                <img className={cx('IMGS_img')} src={item.img} style={{ position: 'relative', top: 3 }} />
+                <div
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-start',
+                    alignItems: 'flex-start',
+                    padding: '12px 24px',
+                    position: 'relative',
+                    top: -11,
+                    backgroundColor: 'white',
+                    height: 80,
+                    width: 387,
+                    left: 5,
+                  }}
+                >
+                  <h3
+                    style={{
+                      fontFamily: 'Inter',
+                      fontSize: 20,
+                      fontWeight: 600,
+                      // lineHeight: 32,
+                      textAlign: 'center',
+                      height: 32,
+                      position: 'relative',
+                      top: -10,
+                    }}
+                  >
+                    {item.title}
+                  </h3>
+                  <span
+                    style={{
+                      fontFamily: 'Inter',
+                      fontSize: 14,
+                      fontWeight: 400,
+                      // lineHeight: 21,
+                      textAlign: 'left',
+                      height: 21,
+                      position: 'relative',
+                      top: -15,
+                    }}
+                  >
+                    {item.date}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div style={{ padding: '40px 0 80px' }}>
+            <Button medium>READ MORE</Button>
           </div>
         </div>
       </div>
