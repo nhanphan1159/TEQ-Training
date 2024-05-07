@@ -119,19 +119,19 @@ function Footer() {
             <h3>Company</h3>
             <ul class="mt-7 text-base text-gray-650" style={{ paddingTop: 16 }}>
               <li class="mb-[1.44rem] xl:mb-6 last:mb-0" style={{ paddingBottom: 23 }}>
-                <a href="/">About </a>
+                <a href="/about-us">About </a>
               </li>
               <li class="mb-[1.44rem] xl:mb-6 last:mb-0" style={{ paddingBottom: 23 }}>
-                <a href="/about-us/">Career</a>
+                <a href="/careers">Career</a>
               </li>
               <li class="mb-[1.44rem] xl:mb-6 last:mb-0" style={{ paddingBottom: 23 }}>
-                <a href="/careers/">News</a>
+                <a href="/news">News</a>
               </li>
               <li class="mb-[1.44rem] xl:mb-6 last:mb-0" style={{ paddingBottom: 23 }}>
-                <a href="/news/">Privacy Policy</a>
+                <a href="/">Privacy Policy</a>
               </li>
               <li class="mb-[1.44rem] xl:mb-6 last:mb-0" style={{ paddingBottom: 23 }}>
-                <a href="/gallery/">Cookie Preferences</a>
+                <a href="/">Cookie Preferences</a>
               </li>
             </ul>
           </div>
