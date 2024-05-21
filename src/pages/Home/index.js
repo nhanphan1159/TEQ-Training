@@ -1034,9 +1034,10 @@ function Home() {
             justifyContent: 'center',
             alignItems: 'center',
             flexDirection: 'column',
+            paddingBottom: 40,
           }}
         >
-          <span style={{ padding: '60px 0 40px' }}>Lastest News</span>
+          <span style={{ padding: '140px 0px 40px', width: '100%', height: '100%' }}>Lastest News</span>
           <div
             className={cx('New')}
             style={{
@@ -1107,6 +1108,41 @@ function Home() {
             ))}
           </div>
           <div style={{ padding: '40px 0 80px' }}>
+            <Button medium>READ MORE</Button>
+          </div>
+        </div>
+        <div
+          className={cx('gallery')}
+          style={{
+            width: 1440,
+            height: 839,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'column',
+            paddingBottom: 20,
+          }}
+        >
+          <h3 style={{ padding: '60px 0 40px', width: '100%', height: '100%' }}>Gallery</h3>
+          <div>
+            <svg width="1440" height="528" viewBox="0 0 1440 528" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="1446" height="528" fill="url(#paint0_linear_5_7083)" />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_5_7083"
+                  x1="723"
+                  y1="0"
+                  x2="723"
+                  y2="528"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#FAFAFA" stop-opacity="0.01" />
+                  <stop offset="1" stop-color="#FAFAFA" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div style={{ padding: '40px 0 100px' }}>
             <Button medium>READ MORE</Button>
           </div>
         </div>
