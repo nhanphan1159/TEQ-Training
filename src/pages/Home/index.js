@@ -13,16 +13,18 @@ import { iconTabBar } from '~/asset/icon';
 
 import { Link } from 'react-router-dom';
 import Button from '~/components/Button';
+import Carousel from 'nuka-carousel';
 
 import { partners } from '~/asset/partner';
 import slide1 from '~/asset/img/Top (1).png';
 import slide2 from '~/asset/img/Top.png';
 import slide3 from '~/asset/img/MB.png';
-import Carousel from 'nuka-carousel';
+import ScrollToTop from '~/hook/scrollToTop';
 
 const cx = classNames.bind(styles);
 
 function Home() {
+  ScrollToTop();
   const slides = [
     {
       img: slide1,
@@ -1114,7 +1116,7 @@ function Home() {
         <div
           className={cx('gallery')}
           style={{
-            width: 1440,
+            width: '100%',
             height: 839,
             display: 'flex',
             justifyContent: 'center',
@@ -1124,8 +1126,8 @@ function Home() {
           }}
         >
           <h3 style={{ padding: '60px 0 40px', width: '100%', height: '100%' }}>Gallery</h3>
-          <div>
-            <svg width="1440" height="528" viewBox="0 0 1440 528" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div style={{ width: '100%' }}>
+            <svg width="100%" height="528" viewBox="0 0 1440 528" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="1446" height="528" fill="url(#paint0_linear_5_7083)" />
               <defs>
                 <linearGradient
