@@ -1,17 +1,126 @@
 .wrapper {
   padding-top: 120px;
-  margin: 0 180px;
-}
-.text {
-  width: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
-.text::before {
-  background-color: rgb(6, 53, 218);
-  content: ' ';
-  height: 8px;
-  width: 44px;
-  position: relative;
-  top: -20px;
+.banner-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 43px;
+}
+
+.top-deription {
+  margin: 10px auto 25px;
+  size: 24px;
+  line-height: 24px;
+  color: #666666;
+}
+.information {
+  min-height: auto;
+  width: 100%;
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  padding: 66px 187px 50px 177px;
+}
+.information__ourculture {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 74px;
+  margin-bottom: 78px;
+}
+.information__ourculture__left {
+  flex: 1;
+}
+
+.information__ourculture__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.mg-l {
+  margin-left: 12px;
+  font-size: 24px;
+  color: #222222;
+}
+
+.ourbenefit__title {
+  margin: 30px auto 25px;
+}
+.compensation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.compensation_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.w-h-48-48-df {
+  width: 48px;
+  height: 48px;
+  background-color: #e1e1e1;
+  display: flex;
+}
+
+.mg-10-16 {
+  margin-left: 16px;
+  font-size: 14px;
+  width: auto;
+  color: #333333;
+}
+
+.Spiritual {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ourbenefit__title1 {
+  margin: 6px auto 25px;
+}
+
+.job {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 55px auto 60px;
+  width: 100%;
+}
+
+.job_infor {
+  display: flex;
+  flex-direction: row;
+  margin: 26px 0 24px;
+  gap: 24px;
+}
+
+.job-infor_big {
+  border-radius: 13px;
+  width: 540px;
+  height: 140px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  color: #000;
+  gap: 30px;
+  padding-left: 32px;
 }
