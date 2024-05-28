@@ -8,7 +8,7 @@ import ScrollToTop from '~/hook/scrollToTop';
 
 const cx = classNames.bind(styles);
 
-export default function Navbar() {
+export default function Careers() {
   ScrollToTop();
   return (
     <div className={cx('wrapper')}>
@@ -514,7 +514,7 @@ export default function Navbar() {
         <h1 style={{ fontSize: 36 }}>Opening Vacancies</h1>
         <p className={cx('top-deription')}>We're looking for great people to join our growing team</p>
         <div className={cx('job_infor')}>
-          <a href="text" alt="text" className={cx('job-infor_big')}>
+          <a href="careers/detail" alt="text" className={cx('job-infor_big')}>
             <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="0.408142" y="0.5" width="48" height="48" rx="2" fill="#E1E1E1"></rect>
               <g clip-path="url(#clip0_5_8888)">
@@ -534,7 +534,7 @@ export default function Navbar() {
               <p style={{ color: '#0635DA' }}>Up to $1500</p>
             </div>
           </a>
-          <a href="text" alt="text" className={cx('job-infor_big')}>
+          <a href="careers/detail" alt="text" className={cx('job-infor_big')}>
             <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect y="0.5" width="48" height="48" rx="2" fill="#E1E1E1" />
               <g clip-path="url(#clip0_0_1)">
@@ -557,7 +557,7 @@ export default function Navbar() {
           </a>
         </div>
         <div className={cx('job_infor')} style={{ marginTop: 0 }}>
-          <a href="text" alt="text" className={cx('job-infor_big')}>
+          <a href="careers/detail" alt="text" className={cx('job-infor_big')}>
             <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect y="0.5" width="48" height="48" rx="2" fill="#E1E1E1" />
               <g clip-path="url(#clip0_6_62143)">
@@ -576,13 +576,12 @@ export default function Navbar() {
                 </clipPath>
               </defs>
             </svg>
-
             <div class="Home_carer__right__xX+BQ">
               <h3 style={{ height: 24, marginBottom: 8 }}>Software Testing Engineer (QA/QC/Tester)</h3>
               <p style={{ color: '#0635DA' }}>Up to $1500</p>
             </div>
           </a>
-          <a href="text" alt="text" className={cx('job-infor_big')}>
+          <a href="careers/detail" alt="text" className={cx('job-infor_big')}>
             <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect y="0.5" width="48" height="48" rx="2" fill="#E1E1E1" />
               <g clip-path="url(#clip0_0_1)">
@@ -606,7 +605,7 @@ export default function Navbar() {
         </div>
         <h2 style={{ fontSize: 28, margin: '46px 0 24px' }}>Internship</h2>
         <div className={cx('job_infor')}>
-          <a href="text" alt="text" className={cx('job-infor_big')}>
+          <a href="careers/detail" alt="text" className={cx('job-infor_big')}>
             <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect y="0.5" width="48" height="48" rx="2" fill="#E1E1E1" />
               <path
@@ -620,7 +619,7 @@ export default function Navbar() {
               <p style={{ color: '#0635DA' }}>+ Bonus</p>
             </div>
           </a>
-          <a href="text" alt="text" className={cx('job-infor_big')}>
+          <a href="careers/detail" alt="text" className={cx('job-infor_big')}>
             <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect y="0.5" width="48" height="48" rx="2" fill="#E1E1E1" />
               <g clip-path="url(#clip0_6_62190)">

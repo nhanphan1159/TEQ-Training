@@ -4,5 +4,6 @@ const config = {
   contact: '/contact',
   careers: '/careers',
   gallery: '/gallery',
+  careersdetail: '/careers/detail',
 };
 export default config;

@@ -773,7 +773,7 @@ function Home() {
             <img src={map} width={643} height={480} />
             <div className={cx('carer')}>
               {careers.map((item) => (
-                <a href="text" alt="text" className={cx('carer-big')}>
+                <a href="careers/detail" alt="text" className={cx('carer-big')}>
                   {item.icon}
                   <div className={cx('carer__right')}>
                     <h3 style={{ height: 24 }}>{item.applied}</h3>
