@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './Footer.module.scss';
-
+import { Link } from 'react-router-dom';
 const cx = classNames.bind(styles);
 
 function Footer() {
@@ -52,9 +52,9 @@ function Footer() {
                   stroke-linejoin="round"
                 />
               </svg>
-              <a className={cx('flex-1')} href="tel:+84 335 3335 88" style={{ fontSize: 16 }}>
+              <Link className={cx('flex-1')} to="tel:+84 335 3335 88" style={{ fontSize: 16 }}>
                 (+84) 335 3335 88
-              </a>
+              </Link>
             </div>
 
             <div className={cx('flex-center')}>
@@ -74,9 +74,9 @@ function Footer() {
                   stroke-linejoin="round"
                 />
               </svg>
-              <a className={cx('flex-1')} href="mailto:contact@teqnological.asia" style={{ fontSize: 16 }}>
+              <Link className={cx('flex-1')} to="mailto:contact@teqnological.asia" style={{ fontSize: 16 }}>
                 contact@teqnological.asia
-              </a>
+              </Link>
             </div>
 
             <div className={cx('flex-center')}>
@@ -103,14 +103,14 @@ function Footer() {
                   stroke-linejoin="round"
                 />
               </svg>
-              <a
+              <Link
                 className={cx('flex-1')}
-                href="https://goo.gl/maps/ebsJgpqaDYRjrnBb6"
+                to="https://short.com.vn/kqmY"
                 target="blank"
                 style={{ fontSize: 16 }}
               >
                 No. 301, Floor 3, Block B, Waseco Plaza, 10 Pho Quang, Ward 2, Tan Binh, Ho Chi Minh city, Vietnam
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -119,19 +119,19 @@ function Footer() {
             <h3>Company</h3>
             <ul class="mt-7 text-base text-gray-650" style={{ paddingTop: 16 }}>
               <li class="mb-[1.44rem] xl:mb-6 last:mb-0" style={{ paddingBottom: 23 }}>
-                <a href="/about-us">About </a>
+                <Link to="/about-us">About Us</Link>
               </li>
               <li class="mb-[1.44rem] xl:mb-6 last:mb-0" style={{ paddingBottom: 23 }}>
-                <a href="/careers">Career</a>
+                <Link to="/careers">Career</Link>
               </li>
               <li class="mb-[1.44rem] xl:mb-6 last:mb-0" style={{ paddingBottom: 23 }}>
-                <a href="/news">News</a>
+                <Link to="/news">News</Link>
               </li>
               <li class="mb-[1.44rem] xl:mb-6 last:mb-0" style={{ paddingBottom: 23 }}>
-                <a href="/">Privacy Policy</a>
+                <Link to="/">Privacy Policy</Link>
               </li>
               <li class="mb-[1.44rem] xl:mb-6 last:mb-0" style={{ paddingBottom: 23 }}>
-                <a href="/">Cookie Preferences</a>
+                <Link to="/">Cookie Preferences</Link>
               </li>
             </ul>
           </div>
@@ -139,16 +139,16 @@ function Footer() {
             <h3>Services</h3>
             <ul class="mt-7 text-base text-gray-650" style={{ paddingTop: 16 }}>
               <li class="mb-[1.44rem] xl:mb-6 last:mb-0" style={{ paddingBottom: 23 }}>
-                <a href="/">Web applications</a>
+                <Link to="/">Web applications</Link>
               </li>
               <li class="mb-[1.44rem] xl:mb-6 last:mb-0" style={{ paddingBottom: 23 }}>
-                <a href="/">Mobile applications</a>
+                <Link to="/">Mobile applications</Link>
               </li>
               <li class="mb-[1.44rem] xl:mb-6 last:mb-0" style={{ paddingBottom: 23 }}>
-                <a href="/">API & Backend</a>
+                <Link to="/">API & Backend</Link>
               </li>
               <li class="mb-[1.44rem] xl:mb-6 last:mb-0" style={{ paddingBottom: 23 }}>
-                <a href="/">Quality assurance</a>
+                <Link to="/">Quality assurance</Link>
               </li>
             </ul>
           </div>
@@ -156,22 +156,22 @@ function Footer() {
             <h3>Gallery</h3>
             <ul class="mt-7 text-base text-gray-650" style={{ paddingTop: 16 }}>
               <li class="mb-[1.44rem] xl:mb-6 last:mb-0" style={{ paddingBottom: 23 }}>
-                <a href="/">Company trip</a>
+                <Link to="/">Company trip</Link>
               </li>
               <li class="mb-[1.44rem] xl:mb-6 last:mb-0" style={{ paddingBottom: 23 }}>
-                <a href="/">Project</a>
+                <Link to="/">Project</Link>
               </li>
               <li class="mb-[1.44rem] xl:mb-6 last:mb-0" style={{ paddingBottom: 23 }}>
-                <a href="/">Office</a>
+                <Link to="/">Office</Link>
               </li>
               <li class="mb-[1.44rem] xl:mb-6 last:mb-0" style={{ paddingBottom: 23 }}>
-                <a href="/">Workshop</a>
+                <Link to="/">Workshop</Link>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <span style={{ fontSize: 16 , paddingTop : 16}}>© 2024 Teqnological Asia Co,.Ltd</span>
+      <span style={{ fontSize: 16, paddingTop: 16 }}>© 2024 Teqnological Asia Co,.Ltd</span>
     </div>
   );
 }

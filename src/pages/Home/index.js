@@ -10,6 +10,7 @@ import map from './IMG/Map.jpg';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { iconTabBar } from '~/asset/icon';
+import { useState, useRef, useLayoutEffect } from 'react';
 
 import { Link } from 'react-router-dom';
 import Button from '~/components/Button';
@@ -20,10 +21,12 @@ import slide1 from '~/asset/img/Top (1).png';
 import slide2 from '~/asset/img/Top.png';
 import slide3 from '~/asset/img/MB.png';
 import ScrollToTop from '~/hook/scrollToTop';
+import ShowWindowDimensions from '~/hook/ShowWindowDimensions/ShowWindowDimensions'
 
 const cx = classNames.bind(styles);
 
 function Home() {
+  const [tabIndex, setTabIndex] = useState(0);
   ScrollToTop();
   const slides = [
     {
@@ -42,13 +45,27 @@ function Home() {
       content: 'Design database, develop API and other backend Services',
     },
   ];
+ 
+
+  var x =ShowWindowDimensions()[0]
+
+  function handleSlidleShow() {
+    if (x >= 1300) {
+      return 3;
+    }
+    if (x >= 768) {
+      return 2;
+    } else return 1;
+  }
+
   const params = {
     wrapAround: true,
     animation: '',
-    slidesToShow: 3,
+    slidesToShow: handleSlidleShow(),
     cellAlign: 'left',
     cellSpacing: 18,
   };
+  const refContainer = useRef();
 
   return (
     <div className={cx('wrapper')}>
@@ -656,12 +673,12 @@ function Home() {
           </span>
         </div>
 
-        <div className={cx('content-list')}>
+        <div className={cx('content-list')} ref={refContainer}>
           <Carousel {...params}>
             {slides.map((slide) => (
               <div className={cx('content-item')}>
                 <img className={cx('content-item-img')} src={slide.img} key={slide} alt="ảnh" />
-                <div>
+                <div className={cx('content-item__bot')}>
                   <h2 className={cx('content-item-header')}>{slide.head}</h2>
                   <span className={cx('content-item-text')}>{slide.content}</span>
                 </div>
@@ -709,7 +726,7 @@ function Home() {
         </div>
         <span> our products</span>
         <div className={cx('test')}>
-          <Tabs>
+          <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
             <TabList>
               {iconTabBar.map((item) => (
                 <Tab>
@@ -764,22 +781,22 @@ function Home() {
           </span>
           <div>
             <Button small style={{ fontSize: 16 }}>
-              <a className={cx('btn-join')} href={configRoutes.careers}>
+              <Link className={cx('btn-join')} to={configRoutes.careers}>
                 JOIN US
-              </a>
+              </Link>
             </Button>
           </div>
           <div className={cx('map')}>
             <img src={map} width={643} height={480} />
             <div className={cx('carer')}>
               {careers.map((item) => (
-                <a href="careers/detail" alt="text" className={cx('carer-big')}>
+                <Link to="careers/detail" alt="text" className={cx('carer-big')}>
                   {item.icon}
                   <div className={cx('carer__right')}>
                     <h3 style={{ height: 24 }}>{item.applied}</h3>
                     <p>{item.salary}</p>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -1110,7 +1127,11 @@ function Home() {
             ))}
           </div>
           <div style={{ padding: '40px 0 80px' }}>
-            <Button medium>READ MORE</Button>
+            <Button medium>
+              <Link style={{ textDecoration: 'none', color: 'white' }} to="/news">
+                READ MORE
+              </Link>
+            </Button>
           </div>
         </div>
         <div
@@ -1145,7 +1166,11 @@ function Home() {
             </svg>
           </div>
           <div style={{ padding: '40px 0 100px' }}>
-            <Button medium>READ MORE</Button>
+            <Button medium>
+              <Link style={{ textDecoration: 'none', color: 'white' }} to="gallery">
+                READ MORE
+              </Link>
+            </Button>
           </div>
         </div>
       </div>

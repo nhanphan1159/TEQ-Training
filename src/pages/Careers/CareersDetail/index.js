@@ -7,6 +7,7 @@ import Button from '~/components/Button';
 import ContenTitle from '~/components/ContenTitle';
 import { useState, useRef } from 'react';
 import Validator from '~/hook/Validation/Validator';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -32,11 +33,30 @@ export default function CareersDetail() {
     inputFile.current.click();
   };
 
-  Validator.isRequired = function (selector) {
+  Validator.isRequired = function (selector, min) {
     return {
       selector,
       test: function (value) {
-        return value.trim() ? undefined : 'This is required';
+        return value.trim().length >= min ? undefined : true;
+      },
+    };
+  };
+  Validator.isEmail = function (selector) {
+    return {
+      selector,
+      test: function (value) {
+        var email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        return email.test(value) ? undefined : true;
+      },
+    };
+  };
+
+  Validator.isPhone = function (selector) {
+    return {
+      selector,
+      test: function (value) {
+        var phone = /(((\+|)84)|0)(3|5|7|8|9)+([0-9]{8})\b/g;
+        return phone.test(value) ? undefined : true;
       },
     };
   };
@@ -44,15 +64,15 @@ export default function CareersDetail() {
   Validator({
     form: '#form-01',
     rules: [
-      Validator.isRequired('#name'),
-      Validator.isRequired('#email'),
-      Validator.isRequired('#phone'),
-      Validator.isRequired('#mess'),
-      Validator.isRequired('#github'),
-      Validator.isRequired('#linkedin'),
-      Validator.isRequired('#url-potolio'),
-      Validator.isRequired('#url-http'),
+      Validator.isRequired('#name', 15),
+      Validator.isEmail('#email'),
+      Validator.isPhone('#phone'),
 
+      Validator.isRequired('#mess', 40),
+      Validator.isRequired('#github', 10),
+      Validator.isRequired('#linkedin', 10),
+      Validator.isRequired('#url-potolio', 10),
+      Validator.isRequired('#url-http', 10),
     ],
   });
   return (
@@ -210,12 +230,12 @@ export default function CareersDetail() {
         </div>
         <p className={cx('size-linefont', 'pd-b:34px')}>
           If you are interested in this position, please email your resume/CV to email:
-          <a href="mailto:recruit@teqnological.asia">mailto:recruit@teqnological.asia</a>
+          <Link to="mailto:recruit@teqnological.asia">mailto:recruit@teqnological.asia</Link>
         </p>
       </section>
       <section className={cx('aplly')}>
         <h2>Submit Your Application</h2>
-        <form className={cx('form-input')} name="form-01" id="form-01">
+        <form className={cx('form-input')} name="form-01" id="form-01" method="POST" >
           <input className={cx('input')} placeholder="Ngyen Van A" name="name" id="name" />
           <input className={cx('input')} placeholder="youremail@gmail.com" name="email" id="email" />
           <input className={cx('input')} placeholder="(+84) 936 456 789" name="phone" id="phone" />
@@ -360,7 +380,7 @@ export default function CareersDetail() {
               id="url-http"
             />
           </div>
-          <div style={{ width: 100, height: 45, marginTop: 8 }}>
+          <div style={{ width: 100, height: 45, marginTop: 8 }} onSubmit={(e) => e.preventDefault()}>
             <Button medium>APPLY</Button>
           </div>
         </form>

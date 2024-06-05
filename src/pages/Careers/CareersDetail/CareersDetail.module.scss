@@ -44,6 +44,9 @@
   width: 100%;
   min-width: 1322px;
   padding: 39px 328px 80px;
+  @media screen and (min-width: 1446px) {
+    padding: 39px 552px 80px;
+  }
 }
 
 .pd-t-b-30-12 {

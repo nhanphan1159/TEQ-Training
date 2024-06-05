@@ -7,6 +7,9 @@
   width: 100%; /* Full width */
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
   z-index: 99;
+  @media screen and (max-width: 1280px) {
+    // height: 100%;
+  }
 }
 
 div.nav-bar--hidden {
@@ -15,6 +18,16 @@ div.nav-bar--hidden {
 
 .logo {
   cursor: pointer;
+}
+.logo_link svg {
+  @media screen and (max-width: 1280px) {
+    width: 171px;
+    height: 35px;
+  }
+  @media screen and (max-width: 640px) {
+    width: 145px;
+    height: 30px;
+  }
 }
 
 .inner {
@@ -30,6 +43,25 @@ div.nav-bar--hidden {
   display: flex;
   cursor: pointer;
   align-items: center;
+  @media screen and (max-width: 1280px) {
+    display: none;
+  }
+}
+
+.menu_responsive {
+  display: none;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  text-align: center;
+  @media screen and (max-width: 1280px) {
+    display: flex;
+  }
+}
+
+.menu_icon {
+  margin-left: 8px;
 }
 
 .menu-list {
@@ -98,4 +130,27 @@ div.nav-bar--hidden {
   display: flex;
   width: 100%;
   height: 100%;
+}
+
+.page_menu {
+  width: 100%;
+  min-height: 100%;
+  display: none;
+  position: absolute;
+  top: 100px;
+  background: url('./MenuIcon/Mask\ group.svg') no-repeat left top #fff;
+  background-size: cover;
+  z-index: 99;
+  opacity: 1;
+  padding-top: 48px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu-list_respon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
