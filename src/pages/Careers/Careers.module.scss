@@ -21,16 +21,19 @@
 .information {
   min-height: auto;
   width: 100%;
-  background-color: #ccc;
+  background-color: rgb(220, 220, 220);
   display: flex;
   flex-direction: column;
-  padding: 66px 187px 50px 177px;
+  padding: 66px 229px 50px 229px;
+  @media only screen and (min-width: 1446px) {
+    padding: 66px 474px 50px 464px;
+  }
 }
 .information__ourculture {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 74px;
+  gap: 24px;
   margin-bottom: 78px;
 }
 .information__ourculture__left {
@@ -50,8 +53,12 @@
 
 .mg-l {
   margin-left: 12px;
-  font-size: 24px;
   color: #222222;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
 }
 
 .ourbenefit__title {
@@ -60,7 +67,8 @@
 .compensation {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 60px;
 }
 
 .compensation_row {
@@ -69,6 +77,8 @@
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 24px;
+  width: 452px;
+  max-height: 75px;
 }
 
 .w-h-48-48-df {
@@ -83,6 +93,8 @@
   font-size: 14px;
   width: auto;
   color: #333333;
+  font-weight: 400;
+  line-height: 25.2px;
 }
 
 .Spiritual {

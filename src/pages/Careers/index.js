@@ -5,6 +5,7 @@ import styles from './Careers.module.scss';
 import Map from '../Home/IMG/Map.jpg';
 import ContenTitle from '~/components/ContenTitle';
 import ScrollToTop from '~/hook/scrollToTop';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -24,7 +25,18 @@ export default function Careers() {
         <div className={cx('information__ourculture')}>
           <div className={cx('information__ourculture__left')}>
             <ContenTitle>OUR CULTURE </ContenTitle>
-            <p style={{ marginTop: 21, fontSize: 24, color: '#222222' }}>
+            <p
+              style={{
+                marginTop: 21,
+                fontSize: 24,
+                color: '#222222',
+                fontWeight: 400,
+                lineHeight: '42px',
+                textAlign: 'left',
+                width: 594,
+                height: 145,
+              }}
+            >
               We cultivate a warm and collaborative environment that sparks creativity. With outstanding benefits, we
               prioritize employee well-being and growth.
             </p>
@@ -514,7 +526,7 @@ export default function Careers() {
         <h1 style={{ fontSize: 36 }}>Opening Vacancies</h1>
         <p className={cx('top-deription')}>We're looking for great people to join our growing team</p>
         <div className={cx('job_infor')}>
-          <a href="careers/detail" alt="text" className={cx('job-infor_big')}>
+          <Link to="careers/detail" alt="text" className={cx('job-infor_big')}>
             <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="0.408142" y="0.5" width="48" height="48" rx="2" fill="#E1E1E1"></rect>
               <g clip-path="url(#clip0_5_8888)">
@@ -533,8 +545,8 @@ export default function Careers() {
               <h3 style={{ height: 24, marginBottom: 8 }}>Back-end Developer (Golang)</h3>
               <p style={{ color: '#0635DA' }}>Up to $1500</p>
             </div>
-          </a>
-          <a href="careers/detail" alt="text" className={cx('job-infor_big')}>
+          </Link>
+          <Link to="careers/detail" alt="text" className={cx('job-infor_big')}>
             <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect y="0.5" width="48" height="48" rx="2" fill="#E1E1E1" />
               <g clip-path="url(#clip0_0_1)">
@@ -554,10 +566,10 @@ export default function Careers() {
               <h3 style={{ height: 24, marginBottom: 8 }}>Bridge Engineer (BrSE/PM/Japanese)</h3>
               <p style={{ color: '#0635DA' }}>Up to $1500</p>
             </div>
-          </a>
+          </Link>
         </div>
         <div className={cx('job_infor')} style={{ marginTop: 0 }}>
-          <a href="careers/detail" alt="text" className={cx('job-infor_big')}>
+          <Link to="careers/detail" alt="text" className={cx('job-infor_big')}>
             <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect y="0.5" width="48" height="48" rx="2" fill="#E1E1E1" />
               <g clip-path="url(#clip0_6_62143)">
@@ -580,8 +592,8 @@ export default function Careers() {
               <h3 style={{ height: 24, marginBottom: 8 }}>Software Testing Engineer (QA/QC/Tester)</h3>
               <p style={{ color: '#0635DA' }}>Up to $1500</p>
             </div>
-          </a>
-          <a href="careers/detail" alt="text" className={cx('job-infor_big')}>
+          </Link>
+          <Link to="careers/detail" alt="text" className={cx('job-infor_big')}>
             <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect y="0.5" width="48" height="48" rx="2" fill="#E1E1E1" />
               <g clip-path="url(#clip0_0_1)">
@@ -601,11 +613,11 @@ export default function Careers() {
               <h3 style={{ height: 24, marginBottom: 8 }}>Front-end Developer (Reactjs)</h3>
               <p style={{ color: '#0635DA' }}>Up to $1500</p>
             </div>
-          </a>
+          </Link>
         </div>
         <h2 style={{ fontSize: 28, margin: '46px 0 24px' }}>Internship</h2>
         <div className={cx('job_infor')}>
-          <a href="careers/detail" alt="text" className={cx('job-infor_big')}>
+          <Link to="careers/detail" alt="text" className={cx('job-infor_big')}>
             <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect y="0.5" width="48" height="48" rx="2" fill="#E1E1E1" />
               <path
@@ -618,8 +630,8 @@ export default function Careers() {
               <h3 style={{ height: 24, marginBottom: 8 }}>Internship/Fresher Mobile Developer</h3>
               <p style={{ color: '#0635DA' }}>+ Bonus</p>
             </div>
-          </a>
-          <a href="careers/detail" alt="text" className={cx('job-infor_big')}>
+          </Link>
+          <Link to="careers/detail" alt="text" className={cx('job-infor_big')}>
             <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect y="0.5" width="48" height="48" rx="2" fill="#E1E1E1" />
               <g clip-path="url(#clip0_6_62190)">
@@ -639,7 +651,7 @@ export default function Careers() {
               <h3 style={{ height: 24, marginBottom: 8 }}>Internship/Fresher Front-end Developer</h3>
               <p style={{ color: '#0635DA' }}>+ Bonus</p>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,19 +1,35 @@
 .footer {
   padding: 66px 180px;
+  @media screen and (max-width: 1280px) {
+    padding: 66px 120px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 66px 60px;
+  }
+  @media screen and (min-width: 368px) {
+    padding: 66px 20px;
+  }
   background-color: rgb(220 220 220);
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-
+  width: 100%;
 }
 .wrapper {
   display: flex;
   flex-direction: row;
   min-height: 200px;
-  gap: 7rem;
+  gap: 6.25rem;
+  justify-content: space-around;
+
+  @media screen and (max-width: 1280px) {
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: space-between;
+  }
 }
 .left {
-  width: 340px;
+  max-width: 340px;
   display: flex;
   flex-direction: column;
   // justify-content: center;
@@ -24,6 +40,8 @@
   justify-content: center;
   flex-direction: row;
   gap: 4.1rem;
+  @media screen and (max-width: 768px) {
+    gap: 2.1rem;  }
 }
 
 .infor {
@@ -65,9 +83,13 @@ li {
   }
 }
 
-svg + a{
+svg + a {
   text-decoration: none;
-    color: black;
+  color: black;
 }
 
-
+@media screen and (max-width: 680px) {
+  .gallery {
+    display: none;
+  }
+}
