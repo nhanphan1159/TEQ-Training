@@ -6,7 +6,7 @@
   @media screen and (max-width: 768px) {
     padding: 66px 60px;
   }
-  @media screen and (min-width: 368px) {
+  @media screen and (max-width: 368px) {
     padding: 66px 20px;
   }
   background-color: rgb(220 220 220);
@@ -41,7 +41,8 @@
   flex-direction: row;
   gap: 4.1rem;
   @media screen and (max-width: 768px) {
-    gap: 2.1rem;  }
+    gap: 2.1rem;
+  }
 }
 
 .infor {

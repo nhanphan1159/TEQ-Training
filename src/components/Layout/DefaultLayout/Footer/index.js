@@ -103,12 +103,7 @@ function Footer() {
                   stroke-linejoin="round"
                 />
               </svg>
-              <Link
-                className={cx('flex-1')}
-                to="https://short.com.vn/kqmY"
-                target="blank"
-                style={{ fontSize: 16 }}
-              >
+              <Link className={cx('flex-1')} to="https://short.com.vn/kqmY" target="blank" style={{ fontSize: 16 }}>
                 No. 301, Floor 3, Block B, Waseco Plaza, 10 Pho Quang, Ward 2, Tan Binh, Ho Chi Minh city, Vietnam
               </Link>
             </div>
