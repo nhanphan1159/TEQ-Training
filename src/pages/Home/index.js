@@ -10,7 +10,7 @@ import map from './IMG/Map.jpg';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { iconTabBar } from '~/asset/icon';
-import { useState, useRef, useLayoutEffect } from 'react';
+import { useState, useRef } from 'react';
 
 import { Link } from 'react-router-dom';
 import Button from '~/components/Button';
@@ -21,7 +21,7 @@ import slide1 from '~/asset/img/Top (1).png';
 import slide2 from '~/asset/img/Top.png';
 import slide3 from '~/asset/img/MB.png';
 import ScrollToTop from '~/hook/scrollToTop';
-import ShowWindowDimensions from '~/hook/ShowWindowDimensions/ShowWindowDimensions'
+import ShowWindowDimensions from '~/hook/ShowWindowDimensions/ShowWindowDimensions';
 
 const cx = classNames.bind(styles);
 
@@ -45,9 +45,8 @@ function Home() {
       content: 'Design database, develop API and other backend Services',
     },
   ];
- 
 
-  var x =ShowWindowDimensions()[0]
+  var x = ShowWindowDimensions()[0];
 
   function handleSlidleShow() {
     if (x >= 1300) {
@@ -647,7 +646,7 @@ function Home() {
             </svg>
           </div>
           <svg
-            className={cx('banner-svg', 'other')}
+            className={cx( 'other')}
             xmlns="http://www.w3.org/2000/svg"
             width="1440"
             height="425"
@@ -709,23 +708,12 @@ function Home() {
         <div className={cx('intro')}>
           <img
             className={cx('intro-img')}
-            src="https://teqnological.asia/assets/static/introBackground.161ca539.webp"
-            width="1423px"
-            height="771px"
+            src="https://img.youtube.com/vi/GGUxYwKFVMo/sddefault.jpg"
+            alt="https://img.youtube.com/vi/GGUxYwKFVMo/sddefault.jpg"
           />
-          <img
-            className={cx('intro-logo')}
-            alt="TEQNOLOGICAL ASIA"
-            loading="lazy"
-            decoding="async"
-            src="https://teqnological.asia/images/companyLogo.webp"
-          />
-          <button className={cx('intro-btn')}>
-            <img src="https://teqnological.asia/assets/static/homeIntroPlayBtn.e2d9e630.svg" />
-          </button>
         </div>
         <span> our products</span>
-        <div className={cx('test')}>
+        <div className={cx('products')}>
           <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
             <TabList>
               {iconTabBar.map((item) => (

@@ -115,6 +115,15 @@ div.nav-bar--hidden {
   // width: 159px;
   // height: 52px;
 }
+a[aria-current='page']::after {
+  content: ' ';
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  background: black;
+  width: 100%;
+  color: #000;
+}
 
 .title-btn {
   padding: 8px px;
