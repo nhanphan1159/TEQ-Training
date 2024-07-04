@@ -83,12 +83,11 @@ svg:not(:root) {
   stroke-width: 0.47px;
 }
 .other {
-  stroke: #383838;
+  position: absolute;
+  top: 0;
   left: 0;
-  top: 40px;
-  width: 100%;
-  height: 423.338px;
   flex-shrink: 0;
+  stroke-width: 0.47px;
 }
 
 .banner-btn span {
@@ -327,12 +326,15 @@ button[aria-controls=':r1:-slider-frame'] {
   display: flex;
   width: 100%;
   height: 771px;
+  @media screen and (max-width: 1280px) {
+    height: 100%;
+  }
   margin-bottom: 70px;
 }
 .intro-img {
-  position: absolute;
-  top: 0;
-  left: 0px;
+  // position: absolute;
+  // top: 0;
+  // left: 0px;
   z-index: 1;
   border: #ccc 1px solid;
   width: 100%;
@@ -368,6 +370,14 @@ button[aria-controls=':r1:-slider-frame'] {
   align-items: center !important;
   background-color: #ccc !important;
   width: 100% !important;
+}
+
+.products {
+  padding-top: 70px;
+}
+
+.div[role='tabpanel'] {
+  padding: 0 248px !important;
 }
 
 .icon {

@@ -40,13 +40,11 @@ function Header() {
       transform: 'translateY(-100%)',
     },
   };
-  var x =ShowWindowDimensions()[0]
-
-  
+  var x = ShowWindowDimensions()[0];
 
   return (
     <div style={scrollDirection === 'up' ? styles.hidden : styles.active}>
-      <div className={cx('wrapper')} style={isStatus === true && x <=1280? { height: '100%' } : { height: '99px' }}>
+      <div className={cx('wrapper')} style={isStatus === true && x <= 1280 ? { height: '100%' } : { height: '99px' }}>
         <div className={cx('inner')}>
           <div
             className={cx('logo')}
@@ -121,15 +119,18 @@ function Header() {
             </div>
           </div>
         </div>
-        <div className={cx('page_menu')} style={(isStatus === true && x <= 1280 )? { display: 'flex' } : { display: 'none' }}>
+        <div
+          className={cx('page_menu')}
+          style={isStatus === true && x <= 1280 ? { display: 'flex' } : { display: 'none' }}
+        >
           <ul className={cx('menu-list_respon')}>
             <li className={cx('menu-item')} onClick={handleSetStatus}>
-              <NavLink className={cx('link')} to={configRoutes.home}>
+              <NavLink className={cx('link active')} to={configRoutes.home} activeClassName="test">
                 HOME
               </NavLink>
             </li>
             <li className={cx('menu-item')} onClick={handleSetStatus}>
-              <NavLink className={cx('link')} to={configRoutes.aboutus}>
+              <NavLink className={cx('link', 'active')} to={configRoutes.aboutus}>
                 ABOUT US
               </NavLink>
             </li>
