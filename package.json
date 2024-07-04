@@ -19,10 +19,6 @@
     "axios": "^0.27.2",
     "classnames": "^2.5.1",
     "customize-cra": "^1.0.0",
-<<<<<<< Updated upstream
-=======
-    "gh-pages": "^6.1.1",
->>>>>>> Stashed changes
     "normalize.css": "^8.0.1",
     "nuka-carousel": "^7.0.0",
     "react": "^18.2.0",
